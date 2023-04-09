@@ -9,6 +9,9 @@ function generateColor() {
     let colorCode = "#" + randNum.toString(16); //Convert a randNum to a string, using base 16 (Hexadecimal)
     document.body.style.backgroundColor = colorCode;
     hexCode.textContent = colorCode;
+
+    // getting the color code in clipboard
+    navigator.clipboard.writeText(colorCode);
 }
 
 btn.addEventListener('click', generateColor);
